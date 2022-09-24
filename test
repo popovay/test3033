@@ -1,4 +1,6 @@
 
+#include "TXLib.h"
+
 class Button // имя класса
 {
     int x,y,w,h;
@@ -12,9 +14,16 @@ public: // спецификатор доступа public
         w=BX;
         h=BX;
         TX_color=TX_BLUE;
-        txSetFillColour(TX_color);
-        txRectangle(x,y,x+w,y+h);
+
     }
+
+     int draw()
+     {
+     txSetFillColour(TX_color);
+        txRectangle(x,y,x+w,y+h);
+        }
+
+
 
     int BClick(int xClick,int yClick)
     { if (xClick>x&&yClick>y&&xClick<x+w&&yClick<y+h)
@@ -23,3 +32,9 @@ public: // спецификатор доступа public
 
     }
 };
+
+
+
+
+
+
