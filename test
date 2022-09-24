@@ -1,12 +1,14 @@
 
 #include "TXLib.h"
+#include <string>
 
 class Button // имя класса
 {
-    int x,y,w,h;
-    string color,text, pic;
-    COLORREF TX_color;
+
 public: // спецификатор доступа public
+    int x,y,w,h;
+    string color,text="", pic;
+    COLORREF TX_color;
     Button(int BX, int BY, int BW, int BH, string color ) // конструктор класса
     {
         x=BX;
@@ -17,24 +19,31 @@ public: // спецификатор доступа public
 
     }
 
+    int textAdd(string txt)
+    {
+    text=txt;
+    }
+
      int draw()
      {
+
+
      txSetFillColour(TX_color);
         txRectangle(x,y,x+w,y+h);
+
+
+    if (text!="")
+    {  txDrawText   (x, y, x+w, y+h, text.c_str() );
         }
 
+    }
 
 
     int BClick(int xClick,int yClick)
-    { if (xClick>x&&yClick>y&&xClick<x+w&&yClick<y+h)
+    {
+    if (xClick>x&&yClick>y&&xClick<x+w&&yClick<y+h)
             return 1;
             return 0;
 
     }
 };
-
-
-
-
-
-
