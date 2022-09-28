@@ -4,7 +4,7 @@
 
 int main()
     {
-    txCreateWindow (800, 600);
+    txCreateWindow (1200, 766);
 
     txSetColor (TX_BLACK,3);
     txSetFillColor (TX_WHITE);
@@ -21,16 +21,16 @@ int main()
 
 
     int n=1;
-    for (int i=0; i<1000; i++)
+    for (int i=0; i<500; i++)
     {
 
     txBitBlt (txDC(), 0-i*2, 0, 1600, 600, pic);
-    //  ðèñóåì tarakan
+    //  Ñ€Ð¸ÑÑƒÐµÐ¼ tarakan
         txSetFillColor (TX_BLACK);
         txEllipse (200, 150, 280, 180);
         txEllipse (270, 150, 310, 180);
 
-        //ëàïà ëâ 1
+        //Ð»Ð°Ð¿Ð° Ð»Ð² 1
 
 
         if (n==1)
@@ -40,7 +40,7 @@ int main()
         n=2;
         }
 
-        //ëàïà ëâ 1
+        //Ð»Ð°Ð¿Ð° Ð»Ð² 1
         else
         {
         txLine(210,155,205,118) ;
@@ -54,8 +54,8 @@ int main()
 
 
       }
+      cout<<"vsfbnf"<<endl;
 
 
     return 0;
     }
-
